@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAY HERE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .payment-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+            z-index: 10;
+            max-width: 320px;
+        }
+        .qr-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        .input-field {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="https://raw.githubusercontent.com/GoldBoi4/Website/main/BIG%20DAWGS%20INTRO%20WITH%20CROWN%20IN%20LAST.mp4" type="video/mp4">
+    </video>
+    
+    <div class="payment-container" id="paymentForm">
+        <h2>Secure Payment</h2>
+        <img id="qrCode" src="https://github.com/GoldBoi4/Big-Dawgs/blob/main/1599%20SCAN%20HERE%20TO%20PAY.png?raw=true" alt="Scan QR to Pay" class="qr-image">
+        <p>Amount: ₹<span id="amount">1599</span></p>
+        <input type="text" id="redeemCode" placeholder="Enter Redeem Code" class="input-field">
+        <button class="button" onclick="applyCode()">Apply Code</button>
+    </div>
+    
+    <script>
+        function applyCode() {
+            let code = document.getElementById("redeemCode").value;
+            let qrCode = document.getElementById("qrCode");
+            let amount = document.getElementById("amount");
+            
+            if (code === "BIGDAWGSEP1") {
+                qrCode.src = "https://github.com/GoldBoi4/Big-Dawgs/blob/main/1279%20SCAN%20HERE%20TO%20PAY.png?raw=true";
+                amount.textContent = "1279";
+            } else {
+                alert("Invalid code");
+            }
+        }
+    </script>
+</body>
+</html>
