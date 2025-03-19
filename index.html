@@ -62,9 +62,6 @@
         .button:hover {
             background: #45a049;
         }
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -85,11 +82,10 @@
             let code = document.getElementById("redeemCode").value;
             let qrCode = document.getElementById("qrCode");
             let amount = document.getElementById("amount");
-            
+
             if (code === "BIGDAWGSEP1") {
                 qrCode.src = "https://github.com/GoldBoi4/Big-Dawgs/blob/main/1279%20SCAN%20HERE%20TO%20PAY.png?raw=true";
                 amount.textContent = "1279";
-            } 
             } else {
                 alert("Invalid code");
             }
