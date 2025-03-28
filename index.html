@@ -18,15 +18,8 @@
             font-family: 'Poppins', sans-serif;
             color: white;
             overflow: hidden;
-        }
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+            background: url('https://github.com/GoldBoi4/Big-Dawgs/blob/main/IMG_4677.JPG?raw=true') no-repeat center center;
+            background-size: cover;
         }
         .payment-container {
             background: rgba(0, 0, 0, 0.8);
@@ -65,14 +58,10 @@
     </style>
 </head>
 <body>
-    <video autoplay loop muted>
-        <source src="https://raw.githubusercontent.com/GoldBoi4/Website/main/BIG%20DAWGS%20INTRO%20WITH%20CROWN%20IN%20LAST.mp4" type="video/mp4">
-    </video>
-    
     <div class="payment-container" id="paymentForm">
         <h2>Secure Payment</h2>
-        <img id="qrCode" src="https://github.com/GoldBoi4/Big-Dawgs/blob/main/1599%20SCAN%20HERE%20TO%20PAY.png?raw=true" alt="Scan QR to Pay" class="qr-image">
-        <p>Amount: ₹<span id="amount">1599</span></p>
+        <img id="qrCode" src="https://github.com/GoldBoi4/Big-Dawgs/blob/main/SCAN%20HERE%20TO%20PAY%201799.png?raw=true" alt="Scan QR to Pay" class="qr-image">
+        <p>Amount: ₹<span id="amount">1799</span></p>
         <input type="text" id="redeemCode" placeholder="Enter Redeem Code" class="input-field">
         <button class="button" onclick="applyCode()">Apply Code</button>
     </div>
@@ -84,8 +73,8 @@
             let amount = document.getElementById("amount");
 
             if (code === "BIGDAWGSEP1") {
-                qrCode.src = "https://github.com/GoldBoi4/Big-Dawgs/blob/main/1279%20SCAN%20HERE%20TO%20PAY.png?raw=true";
-                amount.textContent = "1279";
+                qrCode.src = "https://github.com/GoldBoi4/Big-Dawgs/blob/main/SCAN%20HERE%20TO%20PAY%201440.png?raw=true";
+                amount.textContent = "1440";
             } else {
                 alert("Invalid code");
             }
